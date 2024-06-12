@@ -8,8 +8,12 @@
         background-color: white;
         text-align: center;
       }
-      
-      .lds-ring {
+
+.lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
+}
+.lds-ring {
   display: inline-block;
   position: relative;
   width: 80px;
@@ -22,10 +26,10 @@
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid #fff;
+  border: 8px solid currentColor;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #fff transparent transparent transparent;
+  border-color: currentColor transparent transparent transparent;
 }
 .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;
@@ -45,12 +49,13 @@
   }
 }
 
+
   </style>
 </head>
 <body>
   <script>              
               
-    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycby_Z1Pv_wrZrRDEk2mSgDLCh-aiFl10O4ns2uKqpQigspGshXaaHfhORQtQEcAkTUUN/exec";
+    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbz_Na80Gu90DeAz2EibAjxaO0QGRfFP6iEbZRP5TR4CUQEnhR_okbns0SIeXDIPb_cN/exec";
     
     var url = document.location.href;
     var k = url.substr(url.lastIndexOf("k=")+2);
@@ -69,6 +74,6 @@
     }
 
   </script>
-  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+<div class="lds-ring" bis_skin_checked="1"><div bis_skin_checked="1"></div><div bis_skin_checked="1"></div><div bis_skin_checked="1"></div><div bis_skin_checked="1"></div></div>
 </body>
 </html>
